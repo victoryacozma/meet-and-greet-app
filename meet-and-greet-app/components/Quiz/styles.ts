@@ -81,4 +81,22 @@ export default StyleSheet.create({
     marginBottom: 20,
     paddingHorizontal: 40,
   },
+  linkText: {
+    fontSize: 16,
+    color: "#0077b5", // LinkedIn color
+    textDecorationLine: "underline",
+  },
+  customButton: {
+    flexDirection: "row",
+    paddingVertical: 30,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+    alignItems: "center",
+  },
+  customButtonText: {
+    color: "black", // Text color
+    fontSize: 16,
+    fontWeight: "bold",
+    paddingRight: 8,
+  },
 });

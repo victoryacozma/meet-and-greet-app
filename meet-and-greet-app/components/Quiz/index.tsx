@@ -1,7 +1,8 @@
 import styles from "@/components/Quiz/styles";
+import { IconSymbol } from "@/components/ui/IconSymbol";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, Button } from "react-native";
+import { View, Text, TouchableOpacity, Button, Linking } from "react-native";
 
 const questions = [
   {
@@ -75,8 +76,23 @@ export default function Quiz() {
             the way to a perfect match! 💪
           </Text>
         )}
+        <TouchableOpacity
+          onPress={() =>
+            Linking.openURL(
+              "https://www.linkedin.com/in/victoria-cozma-36b8681ab/"
+            )
+          }
+        >
+          <Text style={styles.linkText}>Let's get in touch on LinkedIn</Text>
+        </TouchableOpacity>
 
-        <Button title="Restart Quiz" onPress={() => resetQuiz()} />
+        <TouchableOpacity
+          style={styles.customButton}
+          onPress={() => resetQuiz()}
+        >
+          <Text style={styles.customButtonText}>Restart Quiz</Text>
+          <IconSymbol size={16} name="arrow.clockwise" color={"black"} />
+        </TouchableOpacity>
       </View>
     );
   };
